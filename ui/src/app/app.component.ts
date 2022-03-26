@@ -3,10 +3,11 @@ import { User } from './models/User';
 import { HttpService } from './services/http.service';
 import { PrimeNGConfig } from 'primeng/api';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
 
@@ -15,6 +16,9 @@ export class AppComponent implements OnInit {
   users: User[] = [];
 
   ngOnInit(): void {
-    
+    this.primeConfig.ripple = true;
+  }
+  test(){
+    console.log("Hello world!");
   }
 }

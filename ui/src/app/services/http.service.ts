@@ -5,14 +5,15 @@ import { environment } from 'src/environments/environment';
 import { User } from '../models/User';
 
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root'
 })
 export class HttpService {
-    constructor(private httpsClient: HttpClient) {}
 
-    server = environment.serverAddress + ':' + environment.serverPort;
+  constructor(private httpClient: HttpClient) { }
 
-    getAllUsers(): Observable<User[]>{
-        return this.httpsClient.get<User[]>(this.server + '/allusers');
-    }
+  server = environment.serverAddress + ':' + environment.serverPort;
+
+  getAllUsers(): Observable<User[]> {
+    return this.httpClient.get<User[]>(this.server + '/allusers');
+  }
 }

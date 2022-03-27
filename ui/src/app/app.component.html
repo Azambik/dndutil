@@ -1,7 +1,19 @@
-<p-toolbar>
-  <div class="align-item-start w-screen">
-  <div class="justify-item-end">
-    <p-button pButton label="test" icon="pi pi-sign-in" (onClick)="test()"></p-button>
+<div class="formgrid grid">
+  <div class="col-12">
+    <p-tabView>
+      <p-tabPanel header="Home">
+        <div style="height: 50em;">
+          <h1>test</h1>
+        </div>
+      </p-tabPanel>
+      <p-tabPanel header="Dice">
+        <div style="height: 50em;">
+          <app-dice-roller></app-dice-roller>
+        </div>
+      </p-tabPanel>
+    </p-tabView>
   </div>
+  <div class="flex align-content-end footer col-12">
+    <p>created by <a href="Andrewjzambik@yahoo.com">Andrew Zambik</a></p> 
   </div>
-</p-toolbar>
+</div>

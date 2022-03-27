@@ -1,0 +1,65 @@
+<p-inputNumber [ngModel]="rollResult">{{ rollResult }}</p-inputNumber>
+<p-toolbar>
+    <div class="p-toolbar-group-left ">
+        <p-button class="p-2" label="D4" icon="pi pi-plus" (click)="roll(4)"></p-button>
+        <p-button class="p-2" label="D6" icon="pi pi-plus" (click)="roll(6)"></p-button>
+        <p-button class="p-2" label="D8" icon="pi pi-plus" (click)="roll(8)"></p-button>
+        <p-button class="p-2" label="D10" icon="pi pi-plus" (click)="roll(10)"></p-button>
+        <p-button class="p-2" label="D12" icon="pi pi-plus" (click)="roll(12)"></p-button>
+        <p-button class="p-2" label="D20" icon="pi pi-plus" (click)="roll(20)"></p-button>
+        <p-button class="p-2" label="D%" icon="pi pi-plus" (click)="roll(100)"></p-button>
+    </div>
+</p-toolbar>
+<p-tabView>
+    
+<div class="card">
+    <h5>Past rolls</h5>
+    <p-tabView>
+        <p-tabPanel header="D4">
+        <div>
+            <p-button label="Get Past rolls" (click)="getRollLog(0)"></p-button>
+            <p>{{sortedLog}}</p>
+        </div>   
+        </p-tabPanel>
+        <p-tabPanel header="D6">
+        <div>
+            <p-button label="Get Past rolls" (click)="getRollLog(1)"></p-button>
+            <p>{{sortedLog}}</p>
+        </div>  
+        </p-tabPanel>
+        <p-tabPanel header="D8">
+        <div>
+            <p-button label="Get Past rolls" (click)="getRollLog(2)"></p-button>
+            <p>{{sortedLog}}</p>
+        </div>      
+        </p-tabPanel>
+        <p-tabPanel header="D10">
+        <div>
+            <p-button label="Get Past rolls" (click)="getRollLog(3)"></p-button>
+            <p>{{sortedLog}}</p>
+        </div>          
+        </p-tabPanel>
+        <p-tabPanel header="D12">
+        <div>
+            <p-button label="Get Past rolls" (click)="getRollLog(4)"></p-button>
+            <p>{{sortedLog}}</p>
+        </div>          
+        </p-tabPanel>
+        <p-tabPanel header="D20">
+            <div>
+               <p-button label="Get Past rolls" (click)="getRollLog(5)"></p-button>
+               <p>{{sortedLog}}</p>
+           </div>          
+           </p-tabPanel>
+        <p-tabPanel header="Percent">
+         <div>
+            <p-button label="Get Past rolls" (click)="getRollLog(6)"></p-button>
+            <p>{{sortedLog}}</p>
+        </div>     
+        </p-tabPanel>
+    </p-tabView>
+</div>
+
+    
+    
+
